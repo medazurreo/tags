@@ -1,0 +1,9 @@
+services:
+#    tag.example: 31
+#        class: Med\TagBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    tag.form.type.tags:
+         class: Med\TagBundle\Form\Type\TagsType
+         arguments: ["@doctrine.orm.entity_manager"]
+         tags:
+             - { name: form.type}
